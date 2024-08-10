@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6906eb5c-a7fa-42b4-8dbb-23cc93d62b94" name="Changes" comment="Hashmap + Doubly Linked List">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/py_drill.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py_drill.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2e3c9a5a-3a78-49c8-a30e-df088042139c" />
+        <option name="url" value="https://github.com/PawanKmr470/dsa.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DS/LinkedList.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2DgLtlSgR18UuHlr7pRZiHNqb2G" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.01_ThreadEg.executor&quot;: &quot;Run&quot;,
+    &quot;Python.BST.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Que.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TR01_ValidateBST.executor&quot;: &quot;Run&quot;,
+    &quot;Python.class.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/PawanKumar.Verma/BootCamp/py_drill&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;,
+      &quot;C++&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="Python.BST">
+    <configuration name="BST" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="py_drill" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DS" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DS/BST.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BS_Eg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="py_drill" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problems" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problems/BS_Eg.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.BS_Eg" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6906eb5c-a7fa-42b4-8dbb-23cc93d62b94" name="Changes" comment="" />
+      <created>1661115997802</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661115997802</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Binary search for finding unsorted subarray">
+      <created>1664662584971</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1664662584971</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Binary search for finding unsorted subarray">
+      <created>1664664343880</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1664664343881</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Binary search">
+      <created>1664665110280</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1664665110280</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Min element using Binary search + recursive">
+      <created>1665010749715</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1665010749715</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Using min element with BS + one pass BS">
+      <created>1665010801603</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1665010801603</updated>
+    </task>
+    <task id="LOCAL-00093" summary="HashMap + Stack">
+      <created>1666732589850</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1666732589852</updated>
+    </task>
+    <task id="LOCAL-00094" summary="HashMap + Stack">
+      <created>1666774494587</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1666774494587</updated>
+    </task>
+    <task id="LOCAL-00095" summary="Stack + min Stack">
+      <created>1666995353927</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1666995353927</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Simple Stack use">
+      <created>1666997486377</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1666997486377</updated>
+    </task>
+    <task id="LOCAL-00097" summary="Backtracking + Stack">
+      <created>1667161049274</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1667161049274</updated>
+    </task>
+    <task id="LOCAL-00098" summary="Stack + DFS + Backtracking">
+      <created>1667162857467</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1667162857468</updated>
+    </task>
+    <task id="LOCAL-00099" summary="Stack + DFS + Backtracking">
+      <created>1667189384145</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1667189384145</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Stack + DFS + Backtracking And another solution with only DFS">
+      <created>1667264544574</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1667264544575</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Stack">
+      <created>1667264634314</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1667264634314</updated>
+    </task>
+    <task id="LOCAL-00102" summary="Monotonous stack or decreasing stack">
+      <created>1667298710903</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1667298710903</updated>
+    </task>
+    <task id="LOCAL-00103" summary="Monotonic Stack">
+      <created>1667298792461</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1667298792461</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Basic Set() application">
+      <created>1667317396328</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1667317396328</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Hashmap">
+      <created>1667431082584</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1667431082584</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Sliding window technique + Hashmap">
+      <created>1667517373895</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1667517373895</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Hashmap for diff + index">
+      <created>1667599777061</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1667599777061</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Hash map -&gt; counts : strings">
+      <created>1667601357431</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1667601357431</updated>
+    </task>
+    <task id="LOCAL-00109" summary="Hash map -&gt; counts : strings">
+      <created>1667601942229</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1667601942229</updated>
+    </task>
+    <task id="LOCAL-00110" summary="circular Hashmap + modulus">
+      <created>1667636945356</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1667636945356</updated>
+    </task>
+    <task id="LOCAL-00111" summary="circular Hashmap + modulus">
+      <created>1667637697069</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1667637697070</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Recursion + O(log n) base 2">
+      <created>1667679926454</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1667679926454</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Bucket Sort OR Max Heap">
+      <created>1667688260019</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1667688260019</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Array traversal forward and backward">
+      <created>1667718307467</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1667718307467</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Delimiter">
+      <created>1667760124217</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1667760124217</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Set use case">
+      <created>1667768624369</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1667768624369</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Two Pointers">
+      <created>1667850320700</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1667850320700</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Two Pointers">
+      <created>1668002478694</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1668002478694</updated>
+    </task>
+    <task id="LOCAL-00119" summary="2 Pointers + 1 pass = 3 Pointers">
+      <created>1668038834368</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1668038834368</updated>
+    </task>
+    <task id="LOCAL-00120" summary="2 Pointers">
+      <created>1668067546841</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1668067546841</updated>
+    </task>
+    <task id="LOCAL-00121" summary="2 Pointers">
+      <created>1668113275312</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1668113275312</updated>
+    </task>
+    <task id="LOCAL-00122" summary="2 Pointers + DP">
+      <created>1668548749793</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1668548749793</updated>
+    </task>
+    <task id="LOCAL-00123" summary="2 Pointers">
+      <created>1668550371808</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1668550371808</updated>
+    </task>
+    <task id="LOCAL-00124" summary="2 Pointers">
+      <created>1668555685642</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1668555685642</updated>
+    </task>
+    <task id="LOCAL-00125" summary="2 Pointers, min of maxes of left &amp; right">
+      <created>1668727028111</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1668727028111</updated>
+    </task>
+    <task id="LOCAL-00126" summary="Sliding Window, 2 pointers - left for min and right for max">
+      <created>1668760423053</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1668760423053</updated>
+    </task>
+    <task id="LOCAL-00127" summary="Sliding Window, 2 pointers - left for min and right for max">
+      <created>1668760586832</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1668760586832</updated>
+    </task>
+    <task id="LOCAL-00128" summary="Sliding Window, 2 pointers">
+      <created>1668979507254</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1668979507254</updated>
+    </task>
+    <task id="LOCAL-00129" summary="Sliding Window + HashSet">
+      <created>1669323415275</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1669323415275</updated>
+    </task>
+    <task id="LOCAL-00130" summary="Hashmap + Doubly Linked List">
+      <created>1669411066944</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1669411066944</updated>
+    </task>
+    <task id="LOCAL-00131" summary="Hashmap + Doubly Linked List">
+      <created>1669411142425</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1669411142425</updated>
+    </task>
+    <task id="LOCAL-00132" summary="Binary Search example">
+      <created>1669411212505</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1669411212505</updated>
+    </task>
+    <task id="LOCAL-00133" summary="Hashmap + Doubly Linked List">
+      <created>1669705694922</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1669705694923</updated>
+    </task>
+    <task id="LOCAL-00134" summary="Hashmap + Doubly Linked List">
+      <created>1676800910942</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1676800910942</updated>
+    </task>
+    <task id="LOCAL-00135" summary="Hashmap + Doubly Linked List">
+      <created>1676800931282</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1676800931282</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Hashmap + Doubly Linked List">
+      <created>1676801912549</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1676801912549</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Stack + DFS + Backtracking And another solution with only DFS" />
+    <MESSAGE value="Stack" />
+    <MESSAGE value="Monotonous stack or decreasing stack" />
+    <MESSAGE value="Monotonic Stack" />
+    <MESSAGE value="Basic Set() application" />
+    <MESSAGE value="Hashmap" />
+    <MESSAGE value="Sliding window technique + Hashmap" />
+    <MESSAGE value="Hashmap for diff + index" />
+    <MESSAGE value="Hash map -&gt; counts : strings" />
+    <MESSAGE value="circular Hashmap + modulus" />
+    <MESSAGE value="Recursion + O(log n) base 2" />
+    <MESSAGE value="Bucket Sort OR Max Heap" />
+    <MESSAGE value="Array traversal forward and backward" />
+    <MESSAGE value="Delimiter" />
+    <MESSAGE value="Set use case" />
+    <MESSAGE value="Two Pointers" />
+    <MESSAGE value="2 Pointers + 1 pass = 3 Pointers" />
+    <MESSAGE value="2 Pointers + DP" />
+    <MESSAGE value="2 Pointers" />
+    <MESSAGE value="2 Pointers, min of maxes of left &amp; right" />
+    <MESSAGE value="Sliding Window, 2 pointers - left for min and right for max" />
+    <MESSAGE value="Sliding Window, 2 pointers" />
+    <MESSAGE value="Sliding Window + HashSet" />
+    <MESSAGE value="Binary Search example" />
+    <MESSAGE value="Hashmap + Doubly Linked List" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hashmap + Doubly Linked List" />
+  </component>
+</project>

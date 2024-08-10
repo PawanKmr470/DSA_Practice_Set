@@ -1,0 +1,67 @@
+#include <iostream>
+#include <vector>
+#include <stack>
+using namespace std;
+
+// REF : https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/
+// NOTES :
+//      Similar approach as first part but we will maintain count as well in the stack.
+SERVER - adserver@vxindia.veritas.com
+
+// T: O(n)
+// S: O(n) due to explicit stack
+class Solution {
+public:
+    string removeDuplicates(string s, int k) {
+        stack<pair<char, int>> st;
+        for (int i = 0; i < s.size(); i++) {
+            if (!st.empty() && st.top().first == s[i]) {
+                st.top().second += 1;
+            }
+            else
+                st.push({s[i], 1});
+
+            if (st.top().second == k)
+                st.pop();
+        }
+
+        string result;
+        while (!st.empty()) {
+            // for (int i = st.top().second; i > 0; i--) {
+            //     result = st.top().first + result;   // expand till count
+            // }
+            result = string(st.top().second, st.top().first) + result;
+            st.pop();
+        }
+        
+        return result;
+    }
+};
+
+// Using vector
+class Solution2 {
+public:
+    string removeDuplicates(string s, int k) {
+
+        vector<pair<char, int>> temp;
+
+        for (int i = 0; i < s.size(); i++) {
+            
+            if (temp.size() != 0 && temp.back().first == s[i]) {
+                temp.back().second++;
+            }
+            else
+                temp.push_back({s[i], 1});
+
+            if (temp.back().second == k)
+                temp.pop_back();
+        }
+
+        string result;
+        for (auto &ch : temp) {
+            result.append(ch.second, ch.first);
+        }
+        
+        return result;
+    }
+};
