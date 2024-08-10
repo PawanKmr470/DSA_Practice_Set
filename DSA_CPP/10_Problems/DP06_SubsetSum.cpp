@@ -79,17 +79,32 @@ public:
         if (sum == 0) return true;
         if (n == 0 && sum > 0) return false;
 
-        if (memo[n-1][sum] != -1)
-            return memo[n-1][sum];
+        // if (memo[n-1][sum] != -1)
+        //     return memo[n-1][sum];
+
+        // if (set[n-1] <= sum) {
+        //     memo[n-1][sum] = __subsetSum(set, sum - set[n-1], n-1) ||
+        //                         __subsetSum(set, sum, n-1);
+        //     return memo[n-1][sum];
+        // }
+        // else {
+        //     memo[n-1][sum] = __subsetSum(set, sum, n-1);
+        //     return memo[n-1][sum];
+        // }
+
+        // memo[n-1] just won't utilize last row but we have already made of set.size() + 1 rows
+        // so instead of using memo[n-1][sum], memo[n][sum] would work fine.
+        if (memo[n][sum] != -1)
+            return memo[n][sum];
 
         if (set[n-1] <= sum) {
-            memo[n-1][sum] = __subsetSum(set, sum - set[n-1], n-1) ||
+            memo[n][sum] = __subsetSum(set, sum - set[n-1], n-1) ||
                                 __subsetSum(set, sum, n-1);
-            return memo[n-1][sum];
+            return memo[n][sum];
         }
         else {
-            memo[n-1][sum] = __subsetSum(set, sum, n-1);
-            return memo[n-1][sum];
+            memo[n][sum] = __subsetSum(set, sum, n-1);
+            return memo[n][sum];
         }
     }
 
