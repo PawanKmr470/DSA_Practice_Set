@@ -124,13 +124,12 @@ public:
         for (int i = 0; i < M; i++) {
             dp[i][0] = true;            // because by picking up empty subset/not picking any element will result sum 0
         }
-        for (int j = 1; j < N; j++) {
+        for (int j = 1; j < N; j++) {   // NOTICE j = 1 start
             dp[0][j] = false;           // If subset is empty then sum be anything, result is false
         }
 
         for (int row = 1; row < M; row++) {
             for (int col = 1; col < N; col++) {
-                
                 if (set[row - 1] <= col) {
                     dp[row][col] = dp[row - 1][col] || dp [row - 1][col - set[row - 1]];
                 }

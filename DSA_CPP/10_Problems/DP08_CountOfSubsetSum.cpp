@@ -47,7 +47,13 @@ public:
 
     int __subsetSum(vector<int> &set, int sum, int n, vector<vector<int>>& memo) {
         if (sum == 0) return 1;
-        if (n == 0 && sum > 0) return 0;
+        // if (n == 0 && sum > 0) return 0;
+        if (n == 0) {
+            if (sum == 0)
+                return 1;
+            else
+                return 0;
+        }
 
         if (memo[n-1][sum] != -1)
             return memo[n-1][sum];
@@ -106,10 +112,12 @@ public:
 };
 
 int main() {
-    vector<int> set = {1, 2, 1};
-    int sum = 3;
+    // vector<int> set = {1, 2, 1};
+    vector<int> set = {2, 3, 5, 6, 8, 10};
+    // int sum = 3;
+    int sum = 10;
     cout << "Solution : " << Solution().countSubsetSum(set, sum) << endl;
-    cout << "Solution : " << Solution2().countSubsetSum(set, sum) << endl;
-    cout << "Solution : " << Solution3().countSubsetSum(set, sum) << endl;
+    cout << "Solution2 : " << Solution2().countSubsetSum(set, sum) << endl;
+    cout << "Solution3 : " << Solution3().countSubsetSum(set, sum) << endl;
     return 0;
 }

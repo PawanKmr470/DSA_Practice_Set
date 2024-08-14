@@ -77,9 +77,52 @@ public:
     }
 };
 
+// T: O(n*sum)
+// S: O(n*sum) including aux space
+// DP Bottom Up
+class Solution3 {
+public:
+    bool canPartition(vector<int>& nums) {
+        int sum = 0;
+        for (auto &i : nums) {
+            sum += i;
+        }
+
+        if (sum % 2 != 0) return false;
+        sum = sum/2;
+        
+        // we can't initialize C array with variables. Hence vector.
+        // bool dp[nums.size()+1][sum+1] = {false};
+
+        int M = nums.size() + 1;
+        int N = sum + 1;
+        vector<vector<bool>> dp (M, vector<bool> (N, false));
+        for (int i = 0; i < M; i++) {
+            dp[i][0] = true;
+        }
+        for (int j = 1; j < N; j++) {
+            dp[0][j] = false;
+        }
+
+        for (int i = 1; i < M; i++) {
+            for (int j = 1; j < N; j++) {
+                if (nums[i-1] <= j) {
+                    dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i-1]];
+                }
+                else {
+                    dp[i][j] = dp[i-1][j];
+                }
+            }
+        }
+
+        return dp[M-1][N-1];
+    }
+};
+
 int main() {
-    vector<int> set = { 3, 1, 5, 9, 12 };
-    cout << "Solution : " << Solution().canPartition(set) << endl;
-    cout << "Solution : " << Solution2().canPartition(set) << endl;
+    vector<int> nums = { 3, 1, 5, 9, 12 };
+    cout << "Solution : " << Solution().canPartition(nums) << endl;
+    cout << "Solution2 : " << Solution2().canPartition(nums) << endl;
+    cout << "Solution3 : " << Solution3().canPartition(nums) << endl;
     return 0;
 }
