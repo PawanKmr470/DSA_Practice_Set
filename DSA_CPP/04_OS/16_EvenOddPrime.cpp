@@ -4,6 +4,7 @@
 using namespace std;
 
 // FIX IT
+// All 3 thread will run sequentially and print the number if it is valid output.
 
 int count = 0;
 binary_semaphore bsem_even(1), bsem_odd(0), bsem_prime(0);

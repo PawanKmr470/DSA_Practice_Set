@@ -93,6 +93,8 @@ public:
         
         // we can't initialize C array with variables. Hence vector.
         // bool dp[nums.size()+1][sum+1] = {false};
+        // we can initialize dynamically allocated array but need to access them
+        // through dereferencing operator
 
         int M = nums.size() + 1;
         int N = sum + 1;

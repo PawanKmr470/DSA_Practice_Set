@@ -11,7 +11,7 @@ using namespace std;
 
 int g_data = 0;
 mutex g_mutex;
-bool g_ready = false;
+bool g_ready = false;       // Now it will be used by the condition variable.
 condition_variable cv;
 
 int produceData() {

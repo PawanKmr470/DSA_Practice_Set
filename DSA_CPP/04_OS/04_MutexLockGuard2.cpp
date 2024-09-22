@@ -3,6 +3,8 @@
 #include <mutex>
 using namespace std;
 
+// Another example for 04_MutexLockGuard.cpp
+
 mutex m;
 
 void genfun(char x) {

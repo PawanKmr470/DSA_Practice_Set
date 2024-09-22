@@ -17,7 +17,7 @@ void thread1() {
                         // RAII feature hence unlocking is safe
     }                   // after } mu_guard will release the lock (as per scope)
 }                       // it's a wrapper over mutex object
-                        // RAII (resource acquisition is initialization) meaning
+                        // RAII (Resource Acquisition Is Initialization) meaning
                         // object goes out of scope, its destructor is automatically invoked.
 
 void thread2() {

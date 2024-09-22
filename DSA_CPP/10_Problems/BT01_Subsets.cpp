@@ -27,6 +27,7 @@ using namespace std;
 //          O(n) - recursion height.
 
 // Cascading
+// NOTE - Prefer other two methods of backtracking. This is non-intuitive.
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {

@@ -6,8 +6,13 @@
 #include <semaphore>
 using namespace std;
 
-// Producer-Consumer & Buffer is bounded
-// Two Counting semaphore + 1 Mutex are required
+// Producer-Consumer (Bounded Buffer Problem)
+// 2 Condition Variables + 1 Mutex are required
+// NOTE : But how it is solving producer consumer problem that is again different.
+//        As the producer puts first data in buffer it notifies the consumer thread
+//        which will consume the data and again notify this producer thread.
+//        So the buffer will never be full with 5 elements.
+//        Hence 2 Counting Semaphore + 1 Mutex solution is better.
 
 #define LOOP_SIZE 10
 #define BUF_SIZE 5

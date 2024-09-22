@@ -8,10 +8,14 @@ using namespace std;
 // Producer Consumer
 //      Bounded buffer
 //      Using Mutex & Shared Variable
+// But as we are using shared variable, threads will go into busy waiting
+// condition variable could have put them into sleep if unable to acquire lock.
+// We will see in next problem that how condition variable resolves busy waiting 
+// which we are facing here.
 
 int g_data = 0;
 mutex g_mutex;
-bool g_ready = false;
+bool g_ready = false;       // causing busy waiting
 
 
 int produceData() {

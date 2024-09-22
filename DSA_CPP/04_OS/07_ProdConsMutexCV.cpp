@@ -1,13 +1,19 @@
 #include <iostream>
-#include <thread>
-#include <mutex>
 #include <deque>
 #include <chrono>
+#include <thread>
+#include <mutex>
+#include <condition_variable>
 using namespace std;
 
 // Producer Consumer
 //      Unbounded buffer
 //      Using Mutex & Condition Variable
+
+// cv.wait(lock, [] () { return condition; });
+// condition returns false : thread is blocked.
+// condition returns true : thread resumes bypassing cv.wait()
+//      In short, thread is blocked until lambda function returns true.
 
 deque<int> q;
 mutex m;
@@ -34,7 +40,7 @@ void cons() {
         unique_lock<mutex> uLock(m);
         // cv.wait(uLock);
         cv.wait(uLock, [](){ return !q.empty(); });
-                                    // it will put thread into sleep (SUSPEND precisely)
+                                    // it will put thread into sleep (SUSPENDED state precisely)
                                     // unless doesn't get notification (from cv.notify())
                                     // it will sleep but won't take lock. That's good
                                     // but it can wake up in between (spurious wake)

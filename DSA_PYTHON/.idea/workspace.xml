@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6906eb5c-a7fa-42b4-8dbb-23cc93d62b94" name="Changes" comment="Hashmap + Doubly Linked List">
+      <change beforePath="$PROJECT_DIR$/../DSA_CPP/10_Problems/DP07_EqualSumPartition.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA_CPP/10_Problems/DP07_EqualSumPartition.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA_CPP/21_Test_cpps/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA_CPP/21_Test_cpps/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/py_drill.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py_drill.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/PawanKumar.Verma/BootCamp/py_drill&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/PawanKumar.Verma/BootCamp/DSA/DSA_PYTHON&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   },
   &quot;keyToStringList&quot;: {

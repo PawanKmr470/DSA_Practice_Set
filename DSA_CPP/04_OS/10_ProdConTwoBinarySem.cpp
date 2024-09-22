@@ -3,13 +3,19 @@
 #include <thread>
 using namespace std;
 
-// Producer-Consumer & Buffer is bounded
+// Producer-Consumer (Bounded Buffer Problem)
 // Two binary semaphore are required becuase we want consumer thread to run after producer thread
 // is done. If there would be single binary semaphore then producer thread can run again and
 // override the previous buffer data.
-// Two Binary Semaphores because the way it's implemented 2 binary semaphores works.
 // If producer is running then consumer is waiting and vice versa.
-// See same problem using 2 counting semaphore + 1 binary/Mutex
+
+// NOTE : Here two binary semaphores have been used. But the way they are solving the producer consumer problem
+//        is slightly different i.e. producer keeps filling data in buffer : 0 to n-1 element in one go.
+//        And similarly consumer is reading all the data 0 to n-1 in one go.
+//  Where we use 2 Counting Semaphore + 1 Mutex to solve Producer Consumer Problem there 
+//  counting semaphore's size is buffer size. That means as soon as data is available in the buffer
+//  consumer can consume it and as soon as buffer gets empty producer can fill it
+//  which was not the case with 2 binary semaphores solution.
 
 #define BUF_SIZE 5
 int buf[BUF_SIZE];

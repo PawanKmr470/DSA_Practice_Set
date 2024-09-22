@@ -5,8 +5,8 @@
 #include <deque>
 using namespace std;
 
-// Producer-Consumer & Buffer is bounded
-// Two Counting semaphore + 1 Mutex are required
+// Producer-Consumer (Bounded Buffer Problem)
+// 2 Counting semaphore + 1 Mutex are required
 
 #define LOOP_SIZE 10
 #define BUF_SIZE 5
@@ -14,34 +14,35 @@ deque<int> buf;
 
 counting_semaphore<10> sem_full{0},     // Initially full -> 0
                         sem_empty{5};   // Initially empty -> 5
+                                        // <10> means 10 number of thread can access resource simultaneously (max number).
 mutex m;
 
 void producer() {
     for (int i = 0; i < LOOP_SIZE; ++i) {
-        sem_empty.acquire();
-        m.lock();
+        sem_empty.acquire();                                    // wait(empty)
+        m.lock();                                               // wait(mutex)
         
         int item = rand() % 100;
-        buf.push_back(item);
+        buf.push_back(item);                                    // place in buffer
         cout << "Produced : " << item << endl;
         
-        m.unlock();
-        sem_full.release();
+        m.unlock();                                             // signal(mutex)
+        sem_full.release();                                     // signal(full)
         // this_thread::sleep_for(chrono::milliseconds(100));
     }
 }
 
 void consumer() {
     for (int i = LOOP_SIZE - 1; i >= 0; --i) {
-        sem_full.acquire();
-        m.lock();
+        sem_full.acquire();                                     // wait(full)
+        m.lock();                                               // wait(mutex)
         
         int item = buf.front();
-        buf.pop_front();
+        buf.pop_front();                                        // consume item from buffer
         cout << "Consumed : " << item << endl;
         
-        m.unlock();
-        sem_empty.release();
+        m.unlock();                                             // signal(mutex)
+        sem_empty.release();                                    // signal(empty)
         // this_thread::sleep_for(chrono::milliseconds(100));
     }
 }
