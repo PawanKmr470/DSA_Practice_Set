@@ -74,13 +74,13 @@ int main() {
 
     Stack<int> s;
 
-    thread t1([&]{
+    thread t1([&](){
         for(int i = 0; i < MAX_SIZE; i++) {
             s.push(i);
         }
     });
 
-    thread t2([&]{
+    thread t2([&](){
         while (!s.isEmpty()) {
             int value = s.pop();
             cout << value << " ";
