@@ -4,7 +4,7 @@ using namespace std;
 
 // NOTES :
 //      First way  : is to reverse it and compare with original string
-//      Second way : Start from begining and end & compare towards middle (Iterative & Recursion)
+//      Second way : Start from begining and end & compare towards middle (shrink from ends - Iterative & Recursion)
 //      Third way  : is go to the middle and expand outwards [need to consider even odd cases] (expand from center)
 
 // Second way

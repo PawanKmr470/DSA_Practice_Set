@@ -14,6 +14,10 @@ using namespace std;
 //        So the buffer will never be full with 5 elements.
 //        Hence 2 Counting Semaphore + 1 Mutex solution is better.
 
+// Single CV could have also sovled it. In fact single CV is correct than having two because
+// two CV are just for performing alternate sequence e.g. buf[0] is filled and buf[0] is consumed. No chance to buf[1], buf[2], so on...
+// single CV will make use of those. Hence it's better.
+
 #define LOOP_SIZE 10
 #define BUF_SIZE 5
 deque<int> buf;

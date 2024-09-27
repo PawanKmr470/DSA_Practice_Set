@@ -10,7 +10,7 @@ int nextNumber = 2;
 void printEvenNumbers() {
     while (nextNumber <= 100) {
         std::unique_lock<std::mutex> lock(mutex);
-        while (nextNumber % 2 != 0) {
+        while (nextNumber % 2 != 0) {               // While loop is not taking advantage of CV. Causing busy wait.
             cv.wait(lock);
         }
 

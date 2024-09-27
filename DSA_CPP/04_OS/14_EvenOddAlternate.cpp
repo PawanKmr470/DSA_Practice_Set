@@ -6,6 +6,9 @@
 #include <semaphore>
 using namespace std;
 
+// This is correct way of synchronize even odd threads
+// which makes sure other is surely run once first one completes
+
 mutex m;
 condition_variable cv;
 int count = 0;

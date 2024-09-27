@@ -7,6 +7,9 @@ using namespace std;
 
 // Producer-Consumer (Bounded Buffer Problem)
 // 2 Counting semaphore + 1 Mutex are required
+// This is the CORRECT solution.
+// Justification - Resource count is 5 (i.e. BUF_SIZE).
+// For managing multiple resources, Counting semaphore is suitable choice.
 
 #define LOOP_SIZE 10
 #define BUF_SIZE 5

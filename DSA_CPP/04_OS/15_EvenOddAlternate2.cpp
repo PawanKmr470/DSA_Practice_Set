@@ -7,7 +7,7 @@ using namespace std;
 binary_semaphore bsem_even(1), bsem_odd(0);
 int count = 0;
 
-// This is correct way of synchronize even odd threads
+// This is also a correct way of synchronize even odd threads
 // which makes sure other is surely run once first one completes
 
 void even_fun() {
