@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6906eb5c-a7fa-42b4-8dbb-23cc93d62b94" name="Changes" comment="Hashmap + Doubly Linked List">
-      <change beforePath="$PROJECT_DIR$/../DSA_CPP/10_Problems/DP07_EqualSumPartition.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA_CPP/10_Problems/DP07_EqualSumPartition.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DSA_CPP/21_Test_cpps/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA_CPP/21_Test_cpps/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/py_drill.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py_drill.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA_CPP/02_DS/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA_CPP/02_DS/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA_CPP/03_OOP/11_StringClass.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA_CPP/03_OOP/11_StringClass.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

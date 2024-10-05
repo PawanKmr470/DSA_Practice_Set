@@ -64,6 +64,8 @@ public:
             head = temp->prev;  // If 1 element is there, above while loop will run 1 time and
                                 // will swap NULLs and this if condition won't be required.
                                 // Understand this head = temp->prev
+                                // temp->next could have pointed to last node. Becuase the links are reversed
+                                // now temp->prev will point to the last node. Hence, head = temp->prev;
 
         // while (cur != nullptr) {
         //     temp = cur->next;

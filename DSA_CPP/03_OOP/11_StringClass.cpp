@@ -48,16 +48,16 @@ class String {
 
         // Copy assignement operator
         String& operator=(const String& str) {
-            if (this != &str) {                 // this is pointer to current object
-                char* temp = res;
-                len = str.len;
-                res = new char[len + 1];
-                strcpy(res, str.res);
-                if (temp) {
-                    delete[] temp;                  // we need to delete previous allocation
-                }                                   // BUT only after assignment succeeds. IMPORTANT
-            }
-            return *this;
+            if (this == &str)                       // this is pointer to current object
+                return *this;                       // return same object if passed object is same.
+            
+            char *temp = res;
+            len = str.len;
+            res = new char[len + 1];
+            strcpy(res, str.res);
+            if (temp)
+                delete[] temp;                      // we need to delete previous allocation
+            return *this;                           // BUT only after assignment succeeds. IMPORTANT
         }
 
         // Copy assignment operator with CAS idiom (copy-and-swap idiom)
@@ -84,19 +84,21 @@ class String {
 
         // Move assignment ctor
         String& operator=(String&& str) {
-            if (this != &str) {
-                len = str.len;
-                if (res) {
-                    delete[] res;
-                }
-                res = str.res;
-                str.len = 0;
-                str.res = nullptr;
-            }
+            if (this == &str)
+                return *this;
+
+            len = str.len;
+            if (res)
+                delete[] res;
+            res = str.res;
+            str.len = 0;
+            str.res = nullptr;
             return *this;
         }
 
-        unsigned int length() { return len; }
+        unsigned int length() {
+            return len;
+        }
 
         // Friend functions are not a member of the class and hence they do not have ‘this’ pointer.
         // When we overload a unary operator, we need to pass one argument.
