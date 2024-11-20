@@ -43,7 +43,7 @@ public:
         temp->prev = head->prev;    // then temp's prev
         head->prev->next = temp;    // update last node to point new first node
         head->prev = temp;          // update old first node's prev to point new first node
-        head = temp;                // at last update head pointer
+        head = temp;                // at last update head pointer      >>>> ONLY THIS LINE IS DIFFERENT FROM insertAtEnd() rest is same.
     }
 
     void printLL() {

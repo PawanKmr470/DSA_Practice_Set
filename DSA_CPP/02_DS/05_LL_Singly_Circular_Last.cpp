@@ -59,7 +59,7 @@ public:
 
         temp->next = last->next;    // temp should point where last node is pointing
         last->next = temp;          // add temp node after the last node
-        last = temp;                // update the 'last' pointer to point last node
+        last = temp;                // update the 'last' pointer to point last node    >>>> ONLY THIS LINE IS DIFFERENT FROM insertBegin() rest is same.
     }
 };
 

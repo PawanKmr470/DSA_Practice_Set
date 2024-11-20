@@ -33,7 +33,7 @@ private:
     Node *head;
 public:
     singlyLL() { head = nullptr; }
-    ~singlyLL() {};
+    ~singlyLL() {};                     // Deallocate whole list here
 
     void insertAtBegin(int val) {
         Node *temp = new Node(val);

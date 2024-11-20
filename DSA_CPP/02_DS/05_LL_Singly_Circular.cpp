@@ -41,7 +41,7 @@ public:
         }
         cur->next = temp;       // update last node then
         temp->next = head;      // update first node
-        head = temp;            // make first node head
+        head = temp;            // make first node head         >>>> ONLY THIS LINE IS DIFFERENT FROM insertAtEnd() rest is same.
 
     }
 

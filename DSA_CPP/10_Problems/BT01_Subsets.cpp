@@ -5,7 +5,8 @@ using namespace std;
 // REF : https://leetcode.com/problems/subsets/description/
 // NOTES :
 //      Bruteforce way : cascading
-//          [1] --> [], [1] & [1,2] --> [], [1], [2], [1,2] Here [], [1] is common
+//          [1] --> [], [1]
+//          [1,2] --> [], [1], [2], [1,2]         Here [], [1] is common
 //          only 2 is being added into [], [1] to get [2], [1,2].
 //      Another approach : Backtracking
 //          Where each ith element is included or excluded from the given array
@@ -15,6 +16,8 @@ using namespace std;
 //          subsets are those combinations where element is present OR not present AND
 //          if present then only once. Then only we can compare.
 //      DP is another approach if counting subsets is asked #TODO
+
+//      NOTE : Use the standard BT Template for solving BT problems as mentioned in Solution2 here. <<========== IMP
 
 // T: O(n*2^n)
 //      2^N subsets will be generated.
@@ -79,7 +82,7 @@ public:
     }
 };
 
-// Backtracking (using for loop)
+// Backtracking (using for loop. Standard BT Template)
 class Solution2 {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
@@ -101,9 +104,30 @@ public:
     }
 };
 
+// Same logic as above just i & j are there
+class Solution3 {
+public:
+    vector<vector<int>> result;
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<int> temp;
+        backtrack(0, temp, nums);
+        return result;
+    }
+
+    void backtrack(int i, vector<int> &temp, vector<int>& nums) {
+        result.push_back(temp);
+
+        for (int j = i; j < nums.size(); j++) {
+            temp.push_back(nums[j]);
+            backtrack(j + 1, temp, nums);
+            temp.pop_back();
+        }
+    }
+};
+
 int main() {
     vector<int> nums = {1,2,3};
-    vector<vector<int>> result = Solution2().subsets(nums);
+    vector<vector<int>> result = Solution3().subsets(nums);
     for (auto &i : result) {
         for (auto &j : i) {
             cout << j << " ";

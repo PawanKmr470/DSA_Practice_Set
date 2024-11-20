@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <unordered_set>
 using namespace std;
 
 // REF : https://leetcode.com/problems/permutations/
@@ -9,11 +10,26 @@ using namespace std;
 //      combination -> arrangement of elements doesn't matter (subset/powerset)
 //      permutation -> arrangement of elements matters
 //      It can also be solved with the help of visited set (True/False) or boolean vector.
+//      2 Ways -
+//          By swapping elements (progressive loop i.e. i to n-1) [Solution1]
+//          By using visited array (full loop i.e. 0 to n-1) [Solution, Solution2, Solution3 all are same]
+//                  Standard BT Template (full loop i.e. 0 to n-1) Based on Standard BT Template (For Loop Template)
+//          
+//          Why swap() method exists ? Because permutation is arrangement so swapping works
+//          and doesn't work in case of combination which is a selection process.
+
+// vector<bool> visited(nums.size(), false)
+// unordered_set<int> visited;
+// pay attention to these visited array and set
+// set will only have unique elements but 
+// boolean visited array will have status of every element as visited or not visited
+//      and those elements can be duplicates.
+// In this problem they both are solving same issue But in Permutations II they play differently.
 
 // T: O(n! * n) n -> array lenght & n! is number of permutations
 // S: O(n) stack lenght
 
-// With using visited array
+// By using visited array
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
@@ -46,7 +62,7 @@ public:
 };
 
 
-// With swapping elements
+// By swapping elements
 class Solution1 {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
@@ -74,36 +90,64 @@ public:
     }
 };
 
-
 // Without using visited array & without swapping
+// By using Standard BT Template (For loop Template)
 class Solution2 {
 public:
+    vector<vector<int>> result;
     vector<vector<int>> permute(vector<int>& nums) {
-        vector<vector<int>> result;
         vector<int> cur;
-        dfs(cur, result, nums);
+        dfs(0, cur, nums);
         return result;
     }
 
-    void dfs(vector<int>& cur, vector<vector<int>>& result, vector<int>& nums) {
-
+    void dfs(int i, vector<int> &cur, vector<int> &nums) {
         if (cur.size() == nums.size()) {
             result.push_back(cur);
             return;
         }
 
-        // loop runs for all elements i.e. from i = 0 (full loop)
-        for (auto num : nums) {
+        for (int j = 0; j < nums.size(); j++) {     // j is starting from 0 everytime so dfs call doesn't need i
 
             // if element is present in the cur then skip it
-            // (bcz we are skipping the visited element)
-            if (find(cur.begin(), cur.end(), num) != cur.end())
+            // (either do the find operation in cur array or use a set (i.e. visited array))
+            // Use set preferably as find would be O(n) operation and set would be hashset
+            if (find(cur.begin(), cur.end(), nums[j]) != cur.end())
                 continue;
 
-            cur.push_back(num);
-            dfs(cur, result, nums);
+            cur.push_back(nums[j]);
+            dfs(j + 1, cur, nums);
             cur.pop_back();
         }
     }
 };
 
+// Same as Solution3 but corrected using set and i paramemter in loop
+class Solution3 {
+public:
+    vector<vector<int>> result;
+    unordered_set<int> visited;
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<int> cur;
+        dfs(cur, nums);
+        return result;
+    }
+
+    void dfs(vector<int> &cur, vector<int> &nums) {
+        if (cur.size() == nums.size()) {
+            result.push_back(cur);
+            return;
+        }
+
+        for (int j = 0; j < nums.size(); j++) {
+
+            if (visited.find(nums[j]) == visited.end()) {
+                cur.push_back(nums[j]);
+                visited.insert(nums[j]);
+                dfs(cur, nums);
+                cur.pop_back();
+                visited.erase(nums[j]);
+            }
+        }
+    }
+};
