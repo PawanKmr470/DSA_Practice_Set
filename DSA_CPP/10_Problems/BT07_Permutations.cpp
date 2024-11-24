@@ -29,6 +29,34 @@ using namespace std;
 // T: O(n! * n) n -> array lenght & n! is number of permutations
 // S: O(n) stack lenght
 
+// By swapping elements
+class Solution1 {
+public:
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>> result;
+        
+        // cur won't be required as we're swapping elements in nums array
+        // and storing into result
+        dfs(0, result, nums);
+        return result;
+    }
+
+    void dfs(int index, vector<vector<int>>& result, vector<int>& nums) {
+
+        if (index == nums.size()) {
+            result.push_back(nums);
+            return;
+        }
+
+        // IMP : FOR loop starts from i = index (progressive loop)
+        for (int i = index; i < nums.size(); i++) {
+            swap(nums[index], nums[i]);     // swap it
+            dfs(index + 1, result, nums);
+            swap(nums[index], nums[i]);     // swap it back
+        }
+    }
+};
+
 // By using visited array
 class Solution {
 public:
@@ -62,33 +90,7 @@ public:
 };
 
 
-// By swapping elements
-class Solution1 {
-public:
-    vector<vector<int>> permute(vector<int>& nums) {
-        vector<vector<int>> result;
-        
-        // cur won't be required as we're swapping elements in nums array
-        // and storing into result
-        dfs(0, result, nums);
-        return result;
-    }
 
-    void dfs(int index, vector<vector<int>>& result, vector<int>& nums) {
-
-        if (index == nums.size()) {
-            result.push_back(nums);
-            return;
-        }
-
-        // IMP : FOR loop starts from i = index (progressive loop)
-        for (int i = index; i < nums.size(); i++) {
-            swap(nums[index], nums[i]);     // swap it
-            dfs(index + 1, result, nums);
-            swap(nums[index], nums[i]);     // swap it back
-        }
-    }
-};
 
 // Without using visited array & without swapping
 // By using Standard BT Template (For loop Template)
@@ -112,12 +114,11 @@ public:
             // if element is present in the cur then skip it
             // (either do the find operation in cur array or use a set (i.e. visited array))
             // Use set preferably as find would be O(n) operation and set would be hashset
-            if (find(cur.begin(), cur.end(), nums[j]) != cur.end())
-                continue;
-
-            cur.push_back(nums[j]);
-            dfs(j + 1, cur, nums);
-            cur.pop_back();
+            if (find(cur.begin(), cur.end(), nums[j]) != cur.end()) {
+                cur.push_back(nums[j]);
+                dfs(j + 1, cur, nums);
+                cur.pop_back();
+            }
         }
     }
 };
