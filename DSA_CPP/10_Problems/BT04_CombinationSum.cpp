@@ -10,7 +10,7 @@ using namespace std;
 
 // T: O(2^target) As decision tree is making 2 decisions at a time
 // S: O(target)
-// BT Template based
+// Standard BT Template based
 class Solution {
 public:
     vector<vector<int>> result;
@@ -22,13 +22,13 @@ public:
     
     void dfs(int i, vector<int>& subset, vector<int>& nums, int target) {
 
+        if (target < 0)     // by subtracting resultant me go into -ve. Hence condition is required.
+            return;
+
         if (target == 0) {
             result.push_back(subset);
             return;
         }
-
-        if (target < 0)     // by subtracting resultant me go into -ve. Hence condition is required.
-            return;
 
         for (int j = i; j < nums.size(); j++) {
             subset.push_back(nums[j]);
@@ -38,6 +38,7 @@ public:
     }
 };
 
+// This is conventional method (no for loop)
 class Solution1 {
 public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {

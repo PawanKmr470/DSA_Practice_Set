@@ -54,7 +54,7 @@ public:
     }
 };
 
-// Backtracking
+// Conventinal Backtracking Method
 class Solution1 {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
@@ -67,9 +67,9 @@ public:
 
     void dfs(int i, vector<int>& subset, vector<int>& nums, vector<vector<int>>& result) {
 
-        if (i >= nums.size()) {
-            result.push_back(subset);
-            return;
+        if (i >= nums.size()) {             // With this approach subsets will get formed at the leaf level
+            result.push_back(subset);       // Though they also get formed in the path but as they are at leaf level
+            return;                         // better to collect them with this terminating condition.
         }
 
         // including the ith element
@@ -82,7 +82,7 @@ public:
     }
 };
 
-// Backtracking (using for loop. Standard BT Template)
+// Standard Backtracking Method (using for loop. Standard BT Template)
 class Solution2 {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
@@ -94,9 +94,10 @@ public:
     }
 
     void dfs(int index, vector<int>& subset, vector<int>& nums, vector<vector<int>>& result) {
-        result.push_back(subset);
-
-        for (int i=index; i<nums.size(); i++) {
+        
+        result.push_back(subset);                   // First call will put [] in result and every call would form subsets
+                                                    // which is collected in result
+        for (int i=index; i<nums.size(); i++) {     // For loop will take care of out of bound cases.
             subset.push_back(nums[i]);
             dfs(i+1, subset, nums, result);
             subset.pop_back();

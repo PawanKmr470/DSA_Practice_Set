@@ -89,41 +89,7 @@ public:
     }
 };
 
-
-
-
-// Without using visited array & without swapping
-// By using Standard BT Template (For loop Template)
-class Solution2 {
-public:
-    vector<vector<int>> result;
-    vector<vector<int>> permute(vector<int>& nums) {
-        vector<int> cur;
-        dfs(0, cur, nums);
-        return result;
-    }
-
-    void dfs(int i, vector<int> &cur, vector<int> &nums) {
-        if (cur.size() == nums.size()) {
-            result.push_back(cur);
-            return;
-        }
-
-        for (int j = 0; j < nums.size(); j++) {     // j is starting from 0 everytime so dfs call doesn't need i
-
-            // if element is present in the cur then skip it
-            // (either do the find operation in cur array or use a set (i.e. visited array))
-            // Use set preferably as find would be O(n) operation and set would be hashset
-            if (find(cur.begin(), cur.end(), nums[j]) != cur.end()) {
-                cur.push_back(nums[j]);
-                dfs(j + 1, cur, nums);
-                cur.pop_back();
-            }
-        }
-    }
-};
-
-// Same as Solution3 but corrected using set and i paramemter in loop
+// By using visited hash set
 class Solution3 {
 public:
     vector<vector<int>> result;
@@ -148,6 +114,37 @@ public:
                 dfs(cur, nums);
                 cur.pop_back();
                 visited.erase(nums[j]);
+            }
+        }
+    }
+};
+
+
+// By using find method on temp array. No extra visited array/set
+class Solution2 {
+public:
+    vector<vector<int>> result;
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<int> cur;
+        dfs(cur, nums);
+        return result;
+    }
+
+    void dfs(vector<int> &cur, vector<int> &nums) {
+        if (cur.size() == nums.size()) {
+            result.push_back(cur);
+            return;
+        }
+
+        for (int j = 0; j < nums.size(); j++) {     // j is starting from 0 everytime so dfs call doesn't need i parameter
+
+            // if element is present in the cur then skip it
+            // (either do the find operation in cur array or use a set (i.e. visited array))
+            // Use set preferably as find would be O(n) operation and set would be hashset
+            if (find(cur.begin(), cur.end(), nums[j]) != cur.end()) {
+                cur.push_back(nums[j]);
+                dfs(cur, nums);
+                cur.pop_back();
             }
         }
     }

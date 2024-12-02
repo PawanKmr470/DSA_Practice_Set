@@ -189,29 +189,28 @@ int main(){
     }
 
     // looping for key and value
-    unordered_map<int, string> um1;
-    m1['a'] = "apple";
-    m1['b'] = "boy";
-    m1['c'] = "cat";
+    unordered_map<char, string> um1;
+    um1['a'] = "apple";
+    um1['b'] = "boy";
+    um1['c'] = "cat";
 
-    unordered_map<int, string> um2;
-    m2['a'] = "amazon";
-    m2['b'] = "bloomberg";
-    m2['c'] = "crowdstrike";
+    unordered_map<char, string> um2;
+    um2['a'] = "amazon";
+    um2['b'] = "bloomberg";
+    um2['c'] = "crowdstrike";
 
-    unordered_map<int, string>::iterator umitr1;
-    unordered_map<int, string>::iterator umitr2;
+    unordered_map<char, string>::iterator umitr1;
+    unordered_map<char, string>::iterator umitr2;
 
-    for (umitr1 = um1.begin(), umitr2 = um2.begin(); umitr1 != um1.end(); umitr1++, umitr2++) {
+    for (umitr1 = um1.begin(), umitr2 = um2.begin(); umitr1 != um1.end() && umitr2 != um2.end(); umitr1++, umitr2++) {
         cout << umitr1->first << " - " << umitr1->second << endl;
         cout << umitr2->first << " - " << umitr2->second << endl;
     }
-
+    
     for (auto &[key, value] : um1) {
         cout << key << " = " << value << "\n";
-        cout << key << " - " << m2.at(key) << "\n";
+        // cout << key << " - " << um1.at(key) << "\n";
     }
-
     cout << "*************** Heap ************************" << endl;
 
     priority_queue<int> pq1;                                         // Max Heap

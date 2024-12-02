@@ -75,7 +75,7 @@ public:
     vector<vector<int>> result; 
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {    
         vector<int> subset;
-        sort(nums.begin(), nums.end());         // #include <algorithm> for sort()
+        sort(nums.begin(), nums.end());         // #include <algorithm> for sort(). It will make duplicate adjacent
         backtrack(0, subset, nums);
         return result;
     }
@@ -84,7 +84,7 @@ public:
         result.push_back(subset);
 
         for (int j = i; j < nums.size(); j++) {
-            if (j > i && nums[j] == nums[j-1])
+            if (j > i && nums[j] == nums[j-1])          // Skip the duplicate iteration
                 continue;
             subset.push_back(nums[j]);
             backtrack(j + 1, subset, nums);

@@ -13,6 +13,9 @@ using namespace std;
 //  : O(n^k * k) - k for coying operation. This is Upper Bound complexity
 // S: O(k) - recursion height.
 
+// T : O(n! * n)   n! is for combination and for copying n size answer to result -> n
+// S: O(k) - recursion height.
+
 class Solution {
 public:
     vector<vector<int>> combine(int n, int k) {
@@ -32,7 +35,7 @@ public:
 
         for (int i=index; i <= n; i++) {
             subset.push_back(i);
-            dfs(i+1, subset, n, k, result);
+            dfs(i + 1, subset, n, k, result);
             subset.pop_back();
         }
     }
@@ -67,9 +70,42 @@ public:
     }
 };
 
-// without for loop
 // Solution1 and 2 are template based and correct ones.
+// without for loop. Using the conventional way (i.e. include fun call then exclude fun call. No For loop)
 class Solution2 {
+public:
+    vector<vector<int>> result;
+    vector<vector<int>> combine(int n, int k) {
+        vector<int> temp;
+        dfs(1, n, k, temp);
+        return result;
+    }
+
+    void dfs(int i, int &n, int k, vector<int> &temp) {
+        
+        if (k == 0) {
+            result.push_back(temp);
+            return;
+        }
+
+        if (i > n) return;
+
+        // if (i > n) {                         // also fine
+        //     if (k == 0)
+        //         result.push_back(temp);
+        //     return;
+        // }
+
+        temp.push_back(i);
+        dfs(i + 1, n, k - 1, temp);
+
+        temp.pop_back();
+        dfs(i + 1, n, k, temp);
+    }
+};
+
+// Difference : n is converted into array.
+class Solution3 {
 public:
     vector<vector<int>> combine(int n, int k) {
         vector<vector<int>> result;
