@@ -6,6 +6,7 @@
 using namespace std;
 
 // shared_mutex provided in C++ solve the reader writer synchronization problem.
+// Still create another solving the same using two binary semaphore and a read count 
 
 shared_mutex shared_data_mutex;
 int shared_data = 0;

@@ -58,7 +58,7 @@ class SharedPtr {
         SharedPtr<T> &operator=(const SharedPtr<T> &ptr) {
             cout << "Copy assignment operator" << endl;
 
-            if (this == &ptr) {
+            if (this != &ptr) {
                 DecCounter();               // Decrementing counter for LHS pointer
                 res = ptr.res;
                 counter = ptr.counter;

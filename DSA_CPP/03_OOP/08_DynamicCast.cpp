@@ -3,7 +3,7 @@ using namespace std;
 
 class Base {
 public:
-    virtual void display()=0;
+    virtual void display()=0;   // Pure virtual function enforces method implementation in Derived class.
 };
 
 class Derived1 : public Base {

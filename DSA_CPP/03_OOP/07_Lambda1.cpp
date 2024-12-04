@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-// [capture list] (arguments) { funtion body}
+// [capture list] (arguments) {funtion body}
 // capture list
 // arguments
 // return type
