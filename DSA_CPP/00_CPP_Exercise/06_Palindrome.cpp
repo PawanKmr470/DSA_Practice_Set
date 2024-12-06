@@ -47,4 +47,5 @@ int main() {
     cout << Palindrome1(s) << endl;
     cout << Palindrome2(s) << endl;
     return 0;
+    
 }
