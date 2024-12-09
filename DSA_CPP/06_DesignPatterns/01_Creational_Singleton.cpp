@@ -6,10 +6,11 @@ mutex mtx;
 
 class Singleton {
     private:
-        static Singleton* pObj;
-        Singleton() {};     // Making the ctor private
-                            // We can also make copy ctor & = operator private here
-                            // instead of deleting them, same thing.
+        static Singleton* ptr;                             // Declaration inside the class
+        Singleton() { cout << "ctor called" << endl; };     // Making the ctor private
+                                                            // We can also make copy ctor & = operator private here
+                                                            // instead of deleting them, same thing.
+        ~Singleton() { cout << "dtor called" << endl; };
     public:
 
         // Singletons should not be cloneable (delete copy ctor).
@@ -19,18 +20,21 @@ class Singleton {
         const Singleton& operator=(const Singleton &) = delete;
 
         // This definition should be outside of the class as per c++ guidelines
+        // Why static becuase of two reasons -
+        // 1. We need to modify static data member which only static method can do.
+        // 2. We want to call this method without creating the object. Static methods can be called with Classname only.
         static Singleton* getInstance() {
             lock_guard<mutex> myLock(mtx);  // just thread safe
 
-            if (pObj == nullptr) {
+            if (ptr == nullptr) {
                 cout << "New instance" << endl;
-                pObj = new Singleton;
-                return pObj;
+                ptr = new Singleton();
             }
             else {
                 cout << "Previous instance" << endl;
-                return pObj;
             }
+            return ptr;
+
         }
 
         void otherFunc() {
@@ -38,7 +42,16 @@ class Singleton {
         }
 };
 
-Singleton* Singleton::pObj = nullptr;
+// Definition outside the class
+// Initialization happens once:
+// The static data member is initialized once (as it's a class variable) at the beginning of the program,
+// or the first time it is used in the code.
+// To avoid multiple definitions, we define them outside the class, usually in a source file.
+// Static data members are initialized before any object of the class is created.
+// Initializing them outside the class ensures that they are initialized correctly and in the right order.
+// If you define the static data member as const, constexpr, or with some other initialization in its declaration,
+// the initialization might also occur at compile-time or when the class is instantiated.
+Singleton* Singleton::ptr = nullptr;
 
 
 // without dynamic allocation
@@ -58,11 +71,13 @@ class Singleton2 {
 
 int main() {
 
-    Singleton* instance = Singleton::getInstance();
-    cout << "Addr of instance 1 : " << instance << endl;
-    Singleton* instance2 = Singleton::getInstance();
-    cout << "Addr of instance 2 : " << instance2 << endl;
-    instance2->otherFunc();
+    Singleton* ptr1 = Singleton::getInstance();
+    cout << "Addr of ptr1 : " << ptr1 << endl;
+
+    Singleton* ptr2 = Singleton::getInstance();
+    cout << "Addr of ptr2 : " << ptr2 << endl;
+    ptr2->otherFunc();
+
     cout << "*******************" << endl;
 
     Singleton2 &s1 = Singleton2::getInstance();
