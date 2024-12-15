@@ -9,8 +9,8 @@ private:
     size_t capacity;
 
 public:
-    Vector() : ptr(nullptr), size(0), capacity(1) {
-        ptr = new T[capacity];
+    Vector() : ptr(nullptr), size(0), capacity(1) {     // Why capacity 1 ? 
+        ptr = new T[capacity];                          // becuase we'll be doubling it when required. 0 won't work. 2*0 => 0
     }
 
     ~Vector() {
@@ -19,8 +19,7 @@ public:
 
     void push_back(const T& value) {
         if (size == capacity) {
-            // double the capacity and copy the elements to new array. Deallocate the previous array.
-            capacity = 2 * capacity;
+            capacity = 2 * capacity;                    // double the capacity and copy the elements to new array. Deallocate the previous array.
             T* newPtr = new T[capacity];
 
             for (size_t i = 0; i < size; ++i) {
